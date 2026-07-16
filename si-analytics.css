@@ -1,0 +1,265 @@
+/* ======================================================
+   SI Analytics | R Markdown Branding
+   Author: Strategic Insights & Analytics
+   ====================================================== */
+
+/* ---- Brand Tokens ---- */
+:root {
+  --si-navy: #082B4D;
+  --si-teal: #1F9E89;
+  --si-gold: #F4C430;
+  --si-gray: #6B7280;
+  --si-white: #F8FAFC;
+  --si-border: #E5E7EB;
+  --si-code-bg: #F1F5F9;
+}
+
+/* ---- Base Typography ---- */
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: var(--si-gray);
+  background-color: var(--si-white);
+}
+
+/* ---- Main Content Width ---- */
+.main-container,
+.container-fluid {
+  max-width: 1200px;
+}
+
+/* ---- Headings ---- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--si-navy);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 3px solid var(--si-teal);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.7rem;
+  border-left: 5px solid var(--si-teal);
+  padding-left: 0.6em;
+  margin-top: 2em;
+}
+
+h3 {
+  font-size: 1.35rem;
+  border-left: 5px solid var(--si-navy);
+  padding-left: 0.6em;
+  margin-top: 1.8em;
+}
+
+/* ---- Paragraphs and Lists ---- */
+p,
+li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--si-teal);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover,
+a:focus {
+  color: var(--si-navy);
+  text-decoration: underline;
+}
+
+/* ---- Responsive Video Preview ---- */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 1.75rem auto 2.25rem;
+  overflow: hidden;
+  background-color: #000000;
+  border: 1px solid var(--si-border);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(8, 43, 77, 0.14);
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: 0;
+  border-radius: inherit;
+}
+
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 16 / 9) {
+  .video-container {
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 0;
+  }
+}
+
+/* Optional video title */
+.video-title {
+  max-width: 960px;
+  margin: 1.5rem auto 0.75rem;
+  color: var(--si-navy);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* Optional video description */
+.video-description {
+  max-width: 960px;
+  margin: -1rem auto 1.25rem;
+  color: var(--si-gray);
+  font-size: 0.95rem;
+}
+
+/* ---- Code Blocks ---- */
+pre,
+code {
+  background-color: var(--si-code-bg);
+  border-radius: 6px;
+}
+
+pre {
+  padding: 1em;
+  border-left: 4px solid var(--si-teal);
+  overflow-x: auto;
+}
+
+code {
+  color: var(--si-navy);
+}
+
+/* ---- Tables ---- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2em 0;
+}
+
+th {
+  background-color: var(--si-navy);
+  color: white;
+  padding: 0.75em;
+  text-align: left;
+}
+
+td {
+  padding: 0.75em;
+  border-bottom: 1px solid var(--si-border);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F8FAFC;
+}
+
+/* ---- Blockquotes and Callouts ---- */
+blockquote {
+  border-left: 5px solid var(--si-gold);
+  padding: 0.8em 1em;
+  background-color: #FFF9E6;
+  color: #374151;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ---- Table of Contents ---- */
+.tocify {
+  background-color: var(--si-code-bg);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.tocify-item.list-group-item.active {
+  background-color: var(--si-teal);
+  border-color: var(--si-teal);
+  color: white;
+}
+
+/* ---- Images ---- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---- Footer Signature ---- */
+.si-footer {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid var(--si-border);
+  font-size: 0.9em;
+  color: var(--si-gray);
+}
+
+/* ---- Mobile Adjustments ---- */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .video-container {
+    margin: 1.25rem auto 1.75rem;
+    border-radius: 10px;
+  }
+
+  .video-container iframe {
+    min-height: 210px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ---- Small Mobile Screens ---- */
+@media screen and (max-width: 480px) {
+  .video-container iframe {
+    min-height: 190px;
+  }
+}
